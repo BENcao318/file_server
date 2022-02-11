@@ -11,6 +11,8 @@ server.on('connection', (client) => {
   client.setEncoding('utf8');
   console.log('New client connected!');
 
+
+
   client.on('data', (path) => {
     fs.readFile(path, 'utf8', (err, data) => {
       if(err) {
